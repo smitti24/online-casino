@@ -10,4 +10,8 @@ app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+'/dist/grand-west-casino-online/index.html'));
 });
 
-app.listen(process.env.PORT || 8080);
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server running at port: ${PORT}`)
+});
