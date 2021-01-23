@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://stage.whgstage.com/front-end-test/'
+  baseUrl: 'https://stage.whgstage.com/front-end-test/'
 };
