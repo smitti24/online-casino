@@ -9,7 +9,7 @@ export interface ISpinnerState {
 export class LoaderService {
   private _spinnerSubject = new Subject();
 
-  spinnerState =  this._spinnerSubject as Observable<ISpinnerState>;
+  spinnerState =  <Observable<ISpinnerState>>this._spinnerSubject;;
 
   public show(): void {
     this._spinnerSubject.next( { show: true } as ISpinnerState);

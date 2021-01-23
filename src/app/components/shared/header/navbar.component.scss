@@ -8,13 +8,13 @@
 .topnav a {
   float: left;
   display: block;
-  color: $color-green;
+  color: $color-white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 25px;
-  font-weight: 900;
-  min-height: 75px;
+  min-height: 60px;
+  min-width: 250px;
 }
 
 .topnav a:hover {
@@ -63,8 +63,9 @@
     background-color: $color-dark;
   }
 
-  .topnav a {
+  .topnav .icon {
     font-size: 40px;
+    min-width: 60px;
   }
 
   .topnav a:hover {

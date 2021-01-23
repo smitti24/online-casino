@@ -8,24 +8,29 @@
   margin-top: 20px;
 }
 
+.jackpot-overlay {
+  display: block;
+  padding: 2px 16px;
+  position: absolute;
+  color: white;
+  width: 93%;
+  background-color: rgba(0,0,0,.5);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  top: 10px;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
 .card:hover {
   cursor: pointer;
 
   font-size: 18px;
   font-weight: 600;
   text-align: center;
-  .jackpot-overlay {
-    display: block;
-    padding: 2px 16px;
-    position: absolute;
-    color: white;
-    width: 93%;
-    background-color: rgba(0,0,0,.5);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    top: 10px;
-    z-index: 1;
-  }
+
 
   .name-overlay {
     display: block;
@@ -60,7 +65,7 @@
 }
 
 .card:not(:hover) {
-  .name-overlay, .play-button-overlay, .jackpot-overlay{
+  .name-overlay, .play-button-overlay{
     display: none;
   }
 }
