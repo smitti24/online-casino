@@ -1,3 +1,4 @@
+import { LoaderService } from './../../../shared/components/loader/loader.service';
 import { GamesVM } from './../../../../models/games-view.model';
 import { JackpotService } from './../../../../shared/services/jackpots.service';
 import { GameService } from './../../../../shared/services/games.service';
@@ -10,14 +11,17 @@ import { Injectable } from '@angular/core';
 export class NewGamesService {
   public newGames: Array<GamesVM> = new Array<GamesVM>();
 
-  constructor(private _gamesService: GameService, private _jackpotService: JackpotService){
+  constructor(private _gamesService: GameService, private _jackpotService: JackpotService, private _loaderService: LoaderService){
+
     this.getAllNewGames();
   }
 
   public getAllNewGames(): void {
+
     this._gamesService.allGames
     .subscribe((games: Game[]) => {
       games.forEach(game => {
+        this._loaderService.show();
         if (game){
           if (this._gamesService.findCategory(game.categories, 'new')){
             const jackpot = this._jackpotService.allJackpots.find(e => game.id === e.game);
@@ -36,6 +40,8 @@ export class NewGamesService {
 
 
       });
+
+
     });
   }
 }

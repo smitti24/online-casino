@@ -1,3 +1,5 @@
+import { SharedModule } from './components/shared/modules/shared.module';
+import { DashboardModule } from './components/common/dashboard/dashboard.module';
 import { JackpotService } from './shared/services/jackpots.service';
 import { GameService } from './shared/services/games.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,13 +31,15 @@ import { RouterModule } from '@angular/router';
     NewGamesModule,
     TopGamesModule,
     NewGamesModule,
+    DashboardModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [
     GameService,

@@ -51,9 +51,28 @@
     float: none;
     display: block;
     text-align: left;
+
+
   }
 
   .navbar-brand {
     display: block !important;
+  }
+
+  .topnav {
+    background-color: $color-dark;
+  }
+
+  .topnav a {
+    font-size: 40px;
+  }
+
+  .topnav a:hover {
+    background-color: $color-green;
+    color: $color-white;
+  }
+
+  .selected-navbar-item{
+    font-size: 20px;
   }
 }
