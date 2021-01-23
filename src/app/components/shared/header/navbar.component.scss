@@ -5,6 +5,7 @@
   overflow: hidden;
 }
 
+
 .topnav a {
   float: left;
   display: block;
@@ -51,8 +52,6 @@
     float: none;
     display: block;
     text-align: left;
-
-
   }
 
   .navbar-brand {
@@ -76,4 +75,13 @@
   .selected-navbar-item{
     font-size: 20px;
   }
+
+  .selected-navbar-item {
+    float: left !important;
+    left: 0;
+    margin-top: 10px
+  }
 }
+
+
+
