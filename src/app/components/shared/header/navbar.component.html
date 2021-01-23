@@ -1,0 +1,24 @@
+<div class="topnav " id="myTopnav">
+  <!-- <span>{{selectedItem}}</span> -->
+  <span>
+    <a class="navbar-brand" href="#">
+      <img src="../../../../assets/images/whg-logo.png" alt="Logo" style="width:80px;">
+    </a>
+    <a class="nav-link" routerLinkActive="link-active" routerLink="/top-games" (click)="setSelectedNavItem('Top Games')">Top Games </a>
+    <a class="nav-link" routerLinkActive="link-active" routerLink="/new-games" (click)="setSelectedNavItem('New Games')">New Games </a>
+    <a class="nav-link" routerLinkActive="link-active" routerLink="/slots-games" (click)="setSelectedNavItem('Slot Games')">Slots </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/">Jackpots </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/">Live </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/">Blackjack </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/">Roulette </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/" (click)="setSelectedNavItem('Table')">Table </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/">Poker </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/other-games" (click)="setSelectedNavItem('Other Games')">Other </a>
+
+    <a class="icon" (click)="toggleNavbar()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </span>
+
+</div>
+

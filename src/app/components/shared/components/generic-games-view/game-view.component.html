@@ -1,0 +1,41 @@
+<div class="games-container ">
+  <div class="row justify-content-center">
+    <div *ngFor="let game of games">
+      <div class="col-sm card-container">
+        <div class="card">
+
+          <div *ngIf="game.isNew && showNewBadge">
+            <img  class="top-banner" src="../../../../assets/images/new-ribbon.png" >
+          </div>
+
+          <div *ngIf="game.isTop && showTopBadge">
+            <img  class="top-banner" src="../../../../assets/images/top-ribbon.png" >
+          </div>
+
+          <div>
+            <span *ngIf=game?.isJackpot class="jackpot-overlay">
+              <p>{{game?.jackpotAmount | currency}}</p>
+            </span>
+            <img class="game-image" #gameImage src={{game?.image}} alt="Image not found" (error)="setDefaultImage(gameImage)" style="width:100%">
+            <span class="play-button-overlay ">
+              <img src="../../../../assets/images/play-button.png">
+            </span>
+            <span class="overlay name-overlay">
+              <p>{{game?.name}}</p>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
