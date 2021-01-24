@@ -1,8 +1,9 @@
+import { GamesVM } from './../../models/games-view.model';
 import { environment } from './../../../environments/environment';
 import { Jackpot } from './../../models/jackpot.model';
 import { ApiService } from './api.service';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { interval, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,19 @@ export class JackpotService {
       .toPromise().then((jackpots: Array<Jackpot>) => {
         this.allJackpots = jackpots;
       });
+  }
+
+  public updateJackpotAmounts(gamesToCheck: Array<GamesVM>): void {
+    interval(5000).subscribe(x => {
+      this.getAllJackpots().then(() => {
+        this.allJackpots.forEach(jackpot => {
+          gamesToCheck.forEach(game => {
+            if (game.id === jackpot.game) {
+              game.jackpotAmount = jackpot?.amount?.toString();
+            }
+          });
+        });
+      });
+    });
   }
 }

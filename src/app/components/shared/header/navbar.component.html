@@ -1,4 +1,4 @@
-<div class="topnav " id="myTopnav">
+<div class="topnav navbar-static-top" id="myTopnav">
   <!-- <span>{{selectedItem}}</span> -->
   <span>
     <!-- <a class="navbar-brand" routerLink="/" (click)="setSelectedNavItem('Logo')">
@@ -7,7 +7,7 @@
     <a class="icon selected-navbar-item">
       {{selectedItem}}
     </a>
-    <a class="nav-link"></a>
+    <a class="nav-link empty-nav-link"></a>
     <a class="nav-link" routerLinkActive="link-active" routerLink="/top-games" (click)="setSelectedNavItem('Top Games')">Top Games </a>
     <a class="nav-link" routerLinkActive="link-active" routerLink="/new-games" (click)="setSelectedNavItem('New Games')">New Games </a>
     <a class="nav-link" routerLinkActive="link-active" routerLink="/slots-games" (click)="setSelectedNavItem('Slot Games')">Slots </a>

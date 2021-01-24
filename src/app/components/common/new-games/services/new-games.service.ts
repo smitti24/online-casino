@@ -36,11 +36,11 @@ export class NewGamesService {
             });
           }
         }
-
-
       });
-
-
     });
+  }
+
+  public updateJackpotAmount(): void {
+    this._jackpotService.updateJackpotAmounts(this.newGames);
   }
 }

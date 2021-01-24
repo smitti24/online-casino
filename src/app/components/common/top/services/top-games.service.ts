@@ -3,6 +3,8 @@ import { GamesVM } from './../../../../models/games-view.model';
 import { Injectable } from '@angular/core';
 import { Game } from 'src/app/models/game.model';
 import { GameService } from 'src/app/shared/services/games.service';
+import { interval } from 'rxjs';
+import { Jackpot } from 'src/app/models/jackpot.model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +35,11 @@ export class TopGamesService {
             });
           }
         }
-
-
       });
     });
+  }
+
+  public updateJackpotAmount(): void {
+    this._jackpotService.updateJackpotAmounts(this.topGames);
   }
 }

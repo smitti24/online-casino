@@ -1,5 +1,5 @@
 import { TopGamesService } from './services/top-games.service';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-new-games',
@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./top-games.component.scss']
 })
 
-export class TopGamesComponent implements OnInit {
+export class TopGamesComponent implements AfterViewInit {
 
   constructor(public _topGamesService: TopGamesService){
-
   }
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this._topGamesService.updateJackpotAmount();
   }
 
 }

@@ -33,9 +33,11 @@ export class SlotGamesService {
             });
           }
         }
-
-
       });
     });
+  }
+
+  public updateJackpotAmount(): void {
+    this._jackpotService.updateJackpotAmounts(this.slotGames);
   }
 }

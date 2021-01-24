@@ -9,15 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GamesVMComponent implements OnInit {
   @Input() games: Array<GamesVM> = new Array<GamesVM>();
-  @Input() showTopBadge: boolean = true;
-  @Input() showNewBadge: boolean = true;
+  @Input() showTopBadge = true;
+  @Input() showNewBadge = true;
 
-  constructor(private _jackpotService: JackpotService) {
-    // interval(10000).subscribe(x => {
-    //   this._jackpotService.getAllJackpots().then(() => {
-    //     this.
-    //   });
-    // });
+  constructor() {
+
   }
 
   ngOnInit(): void { }

@@ -7,24 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
-  public selectedItem = ''
+  public selectedItem = '';
   constructor() {}
-  ngOnInit() {}
+  ngOnInit(): void {}
 
   public toggleNavbar(): void {
-    var x = document.getElementById('myTopnav');
-    if (x)
+    const topNavbar = document.getElementById('myTopnav');
+    if (topNavbar)
     {
-        if (x.className === 'topnav') {
-          x.className += ' responsive';
+        if (topNavbar.className === 'topnav') {
+          topNavbar.className += ' responsive';
         } else {
-          x.className = 'topnav';
+          topNavbar.className = 'topnav';
         }
     }
 
   }
 
-  public setSelectedNavItem(selectedNavItemText: string){
+  public setSelectedNavItem(selectedNavItemText: string): void{
     const navbar = document.getElementById('myTopnav');
     if (navbar) {
       this.selectedItem = selectedNavItemText;

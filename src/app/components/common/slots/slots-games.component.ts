@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SlotGamesService } from './services/slots-games.service';
 
 @Component({
@@ -6,8 +6,10 @@ import { SlotGamesService } from './services/slots-games.service';
   templateUrl: './slots-games.component.html',
   styleUrls: ['./slots-games.component.scss']
 })
-export class SlotsGamesComponent implements OnInit {
+export class SlotsGamesComponent implements AfterViewInit {
   constructor(public _slotGamesService: SlotGamesService) { }
 
-  ngOnInit(): void { }
+  ngAfterViewInit(): void {
+    this._slotGamesService.updateJackpotAmount();
+  }
 }
