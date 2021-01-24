@@ -16,7 +16,7 @@
             <span *ngIf=game?.isJackpot class="jackpot-overlay">
               <p>{{game?.jackpotAmount | currency}}</p>
             </span>
-            <img class="game-image" #gameImage src={{game?.image}} alt="Image not found" (error)="setDefaultImage(gameImage)" style="width:100%">
+            <img class="game-image" #gameImage src={{game?.image}} alt="Image not found" (error)="setDefaultImage(gameImage)">
             <span class="play-button-overlay ">
               <img src="../../../../assets/images/play-button.png">
             </span>

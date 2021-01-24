@@ -23,7 +23,7 @@ export class JackpotService {
   }
 
   public updateJackpotAmounts(gamesToCheck: Array<GamesVM>): void {
-    interval(5000).subscribe(x => {
+    interval(1000).subscribe(x => {
       this.getAllJackpots().then(() => {
         this.allJackpots.forEach(jackpot => {
           gamesToCheck.forEach(game => {

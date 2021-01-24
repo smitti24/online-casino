@@ -1,3 +1,5 @@
+import { RouletteGamesModule } from './components/common/roulette/roulette-games.module';
+import { PokerGamesModule } from './components/common/poker/poker-games.module';
 import { ApiService } from './shared/services/api.service';
 import { SharedModule } from './components/shared/modules/shared.module';
 import { DashboardModule } from './components/common/dashboard/dashboard.module';
@@ -15,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TopGamesModule } from './components/common/top/top-games.module';
 import { RouterModule } from '@angular/router';
+import { BlackjackGamesModule } from './components/common/blackjack/blackjack-games.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { RouterModule } from '@angular/router';
     TopGamesModule,
     NewGamesModule,
     DashboardModule,
+    BlackjackGamesModule,
+    PokerGamesModule,
+    RouletteGamesModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     RouterModule,

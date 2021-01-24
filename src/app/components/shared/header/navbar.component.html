@@ -1,4 +1,4 @@
-<div class="topnav navbar-static-top" id="myTopnav">
+<div class="topnav" id="myTopnav">
   <span>
     <!-- <a class="navbar-brand" routerLink="/" (click)="setSelectedNavItem('Logo')">
       <img src="../../../../assets/images/whg-logo.png" alt="Logo" style="width:80px;">
@@ -9,14 +9,14 @@
     <a class="nav-link empty-nav-link"></a>
     <a class="nav-link" routerLinkActive="link-active" routerLink="/top-games" (click)="setSelectedNavItem('Top Games')">Top Games </a>
     <a class="nav-link" routerLinkActive="link-active" routerLink="/new-games" (click)="setSelectedNavItem('New Games')">New Games </a>
-    <a class="nav-link" routerLinkActive="link-active" routerLink="/slots-games" (click)="setSelectedNavItem('Slot Games')">Slots </a>
+    <a class="nav-link" routerLinkActive="link-active" routerLink="/slots-games" (click)="setSelectedNavItem('Slots')">Slots </a>
     <a class="nav-link" routerLinkActive="active" routerLink="/">Jackpots </a>
     <a class="nav-link" routerLinkActive="active" routerLink="/">Live </a>
-    <a class="nav-link" routerLinkActive="active" routerLink="/">Blackjack </a>
-    <a class="nav-link" routerLinkActive="active" routerLink="/">Roulette </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/blackjack-games" (click)="setSelectedNavItem('Blackjack')">Blackjack </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/roulette-games" (click)="setSelectedNavItem('Roulette')">Roulette </a>
     <a class="nav-link" routerLinkActive="active" routerLink="/" (click)="setSelectedNavItem('Table')">Table </a>
-    <a class="nav-link" routerLinkActive="active" routerLink="/">Poker </a>
-    <a class="nav-link" routerLinkActive="active" routerLink="/other-games" (click)="setSelectedNavItem('Other Games')">Other </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/poker-games" (click)="setSelectedNavItem('Poker Games')">Poker </a>
+    <a class="nav-link" routerLinkActive="active" routerLink="/other-games" (click)="setSelectedNavItem('Other')">Other </a>
 
     <a class="icon" (click)="toggleNavbar()">
       <i class="fa fa-bars"></i>

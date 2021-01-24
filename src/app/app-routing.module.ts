@@ -20,6 +20,18 @@ const routes: Routes = [
     loadChildren: () => import('./components/common/other/other-games.module').then(m => m.OtherGamesModule)
   },
   {
+    path: 'blackjack-games',
+    loadChildren: () => import('./components/common/blackjack/blackjack-games.module').then(m => m.BlackjackGamesModule)
+  },
+  {
+    path: 'poker-games',
+    loadChildren: () => import('./components/common/poker/poker-games.module').then(m => m.PokerGamesModule)
+  },
+  {
+    path: 'roulette-games',
+    loadChildren: () => import('./components/common/roulette/roulette-games.module').then(m => m.RouletteGamesModule)
+  },
+  {
     path: '',
     component: DashboardComponent,
     pathMatch: 'full'
