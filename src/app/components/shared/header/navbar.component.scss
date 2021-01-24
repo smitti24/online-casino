@@ -34,8 +34,9 @@
 }
 
 @media screen and (min-width: 800px) {
-  a .empty-nav-link {
-    display: none;
+
+  .empty-nav-link {
+    display: none !important;
   }
 }
 
