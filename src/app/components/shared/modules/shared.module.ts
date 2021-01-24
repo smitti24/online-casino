@@ -1,6 +1,3 @@
-import { JackpotService } from './../../../shared/services/jackpots.service';
-import { ApiService } from './../../../shared/services/api.service';
-import { GameService } from './../../../shared/services/games.service';
 import { LoaderService } from './../components/loader/loader.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -29,10 +26,7 @@ export function playerFactory() {
     LoaderComponent
   ],
   providers: [
-    LoaderService,
-    GameService,
-    ApiService,
-    JackpotService,
+    LoaderService
   ],
 })
 export class SharedModule {}

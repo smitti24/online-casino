@@ -1,5 +1,8 @@
+import { ApiService } from './shared/services/api.service';
 import { SharedModule } from './components/shared/modules/shared.module';
 import { DashboardModule } from './components/common/dashboard/dashboard.module';
+import { JackpotService } from './shared/services/jackpots.service';
+import { GameService } from './shared/services/games.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NewGamesModule } from './components/common/new-games/new-games.module';
 import { NavbarComponent } from './components/shared/header/navbar.component';
@@ -32,6 +35,9 @@ import { RouterModule } from '@angular/router';
     SharedModule
   ],
   providers: [
+    GameService,
+    ApiService,
+    JackpotService,
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
